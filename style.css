@@ -1,0 +1,19 @@
+/* Tu código base con un par de añadidos para limpiar los márgenes */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images.jpg'); /* Asegúrate de que la imagen esté en la misma carpeta */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    /* Nueva tipografía más moderna y limpia */
+    font-family: 'Arial', sans-serif; 
+}
+
+/* Estilos para centrar el texto y que resalte sobre el fondo */
+.contenedor-presentacion {
+    display: flex;
+    flex-direction: column;
+}
