@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades del Día</title>
+    <link rel="stylesheet" href="personaje.css">
+</head>
+<body>
+
+    <!-- NAV BAR SUPERIOR -->
+    <nav class="top-navbar">
+        <div class="brand-logo"><
+            <span>MINECRAFT</span>
+            <span class="brand-badge">NOTICIAS</span>
+        </div>
+        <ul class="nav-categories">
+        </ul>
+    </nav>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <div class="header-title">
+        <h1>CURIOSIDADES DEL DÍA</h1>
+    </div>
+
+    <!-- BANNER ROTATIVO (NOTICIAS EN TIEMPO REAL) -->
+    <div class="hero-banner-container">
+        
+        <button class="carousel-arrow arrow-prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-arrow arrow-next" onclick="nextSlide()">&#10095;</button>
+
+        
+        <div class="news-slide slide-bg-abeja active">
+            <div class="slide-content">
+                <span class="news-tag">¡NOTICIA DESTACADA!</span>
+                <h2>La abeja</h2>
+                <p>- Cuando una abeja con polen vuela por encima de un cultivo, 
+                    esta tiene una probabilidad de polinizarlo, haciendo que 
+                    este crezca un estado de crecimiento similar a como sucedería 
+                    utilizando polvo de hueso </p>
+              
+            </div>
+            <div class="slide-image-wrapper">
+                <img src="abeja.jpg" alt="abeja">
+            </div>
+        </div>
+
+
+        <div class="news-slide slide-bg-Shulker">
+            <div class="slide-content">
+                <span class="news-tag">CURIOSIDAD DEL DÍA</span>
+                <h2>Shulker</h2>
+                <p>Si un Shulker es golpeado por un proyectil de Shulker, ya sea suyo o de otro Shulker, este tiene una probabilidad de generar un nuevo Shulker, siendo que el Shulker original tras el impacto se teletransportará a otro bloque, pero un Shulker nuevo aparecerá en el mismo bloque donde estaba el original antes del impacto.</p>
+            </div>
+            <div class="slide-image-wrapper">
+                <img src="Shulker.jpg" alt="Shulker">
+            </div>
+        </div>
+
+        <!-- NOTICIA 3: DEEP DARK & THE END -->
+        <div class="news-slide slide-bg-Piglin">
+            <div class="slide-content">
+                <span class="news-tag">CURIOSIDAD DEL DÍA</span>
+                <h2>Piglin</h2>
+                <p>Cuando uno o un grupo de Piglins logra cazar exitosamente 
+                   a un Hoglin, estos tienen una probabilidad de celebrarlo con 
+                   un "baile de la victoria" que consiste de agitar la cabeza y 
+                   levantar los brazos formando una T.</p>
+                   
+                
+            </div>
+            <div class="slide-image-wrapper">
+                <img src="Piglin.jpg" alt="Piglin">
+            </div>
+        </div>
+
+        <!-- INDICADORES / BARRAS DE PROGRESO -->
+        <div class="progress-indicators">
+            <div class="progress-bar-btn active" onclick="goToSlide(0)"><div class="progress-bar-fill"></div></div>
+            <div class="progress-bar-btn" onclick="goToSlide(1)"><div class="progress-bar-fill"></div></div>
+            <div class="progress-bar-btn" onclick="goToSlide(2)"><div class="progress-bar-fill"></div></div>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT DE ROTACIÓN -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.news-slide');
+        const indicators = document.querySelectorAll('.progress-bar-btn');
+        const totalSlides = slides.length;
+        let slideTimer;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                indicators[i].classList.remove('active');
+                const fill = indicators[i].querySelector('.progress-bar-fill');
+                fill.style.animation = 'none';
+                fill.offsetHeight;
+                fill.style.animation = null;
+            });
+
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+
+            resetTimer();
+        }
+
+        function nextSlide() { showSlide((currentSlide + 1) % totalSlides); }
+        function prevSlide() { showSlide((currentSlide - 1 + totalSlides) % totalSlides); }
+        function goToSlide(index) { showSlide(index); }
+
+        function resetTimer() {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(nextSlide, 5000);
+        }
+
+        resetTimer();
+    </script>
+</body>
+</html>

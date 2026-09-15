@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadatos de configuración: codificación de caracteres en UTF-8 y adaptabilidad móvil (responsive) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Vinculación de la hoja de estilos CSS externa que le da diseño a la página -->
+    <link rel="stylesheet" href="dentro.css"  >
+</head>
+<body>
+
+    <!-- Encabezado superior de la aplicación bancaria -->
+    <header>
+        <!-- Logotipo o nombre principal del banco -->
+        <div class="logo">Banco Virtual</div>
+        
+        <!-- Bloque de sesión: muestra el usuario activo y la opción de salir -->
+        <div class="user-info">
+            <span>Hola, Usuario</span>
+            <button class="btn-logout">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <!-- Área de contenido principal de la interfaz bancaria -->
+    <main>
+
+        <!-- Título principal de bienvenida para la vista del usuario -->
+        <h1>Bienvenido a Banco Virtual</h1>
+
+        <!-- Tarjeta de información principal: muestra número de cuenta y saldo -->
+        <section class="cuenta-card">
+            <h2>Mi cuenta</h2>
+            <p class="numero-cuenta">N° Cuenta: **** **** 1234</p>
+            <p class="saldo">Saldo disponible: <strong>$1,500.00</strong></p>
+        </section>
+
+        <!-- Barra de navegación rápida con botones para las funciones principales -->
+        <section class="acciones-rapidas">
+            <button>Transferencias</button>
+            <button>Mis tarjetas</button>
+            <button>Movimientos</button>
+            <button>Pago de Servicios</button>
+        </section>
+
+        <!-- Lista con el historial de transacciones recientes -->
+        <section class="movimientos-recientes">
+            <h3>Últimos Movimientos</h3>
+            <ul>
+                <li><span>Supermercado</span> <strong>-$45.00</strong></li>
+                <li><span>Transferencia Recibida</span> <strong>+$200.00</strong></li>
+                <li><span>Pago de Internet</span> <strong>-$30.00</strong></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Pie de página con información de contacto y credenciales de seguridad -->
+    <footer>
+        <p>Atención al cliente: 2200-0000 | Conexión Segura SSL</p>
+    </footer>
+
+</body>
+</html>
+
+<!-- Reproductor de video de fondo que se reproduce automáticamente en bucle y sin sonido -->
+<video autoplay loop muted playsinline class="video-fondo">
+    <source src="Download.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+</video>
+
+<!-- Contenedor div disponible para posicionar un formulario o elementos adicionales -->
+<div class="contenedor-formulario">
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--Le indica al navegador que el documento utiliza el estándar HTML5.-->
+
+<html lang="en">
+<!--Contenedor principal de todo el código HTML. Especifica que el idioma del contenido está configurado en inglés-->
+<head>
+<!--Sección que contiene metadatos e instrucciones para el navegador que no se muestran directamente en la pantalla.-->
+    <meta charset="UTF-8">
+    <!--Defina la codificación de caracteres en UTF-8, permitiendo desplegar letras con tildes, la letra "ñ" y otros caracteres especiales.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Configure el área visible (viewport) para que la página sea responsiva y se adapte al tamaño de la pantalla de dispositivos móviles y escritorios.-->
+    <title> fumulario bancario </title>
+    <!--Establece el texto que aparece en la pestaña o barra de título del navegador.-->
+    <link rel="stylesheet" href="formulariobancario.css"  >
+    <!--Vincula una hoja de estilo CSS externa llamada formulariobancario.csspara aplicar reglas de diseño al documento.-->
+
+
+    <style>
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        form {
+            width: 500px;
+            padding: 40px;
+            border: 2px solid black;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+        }
+    </style>
+    <!--Esta sección define el diseño visual de los elementos HTML directamente en la página:-->
+</head>
+<body>
+<h1> REGISTRO DE USARIO BANCARIO </h1>
+<!--Encabezado principal de nivel 1 que muestra el título del formulario en pantalla.-->
+  <form action="bancodentro.html">
+<!--Contenedor de las entradas de datos. El atributo actiondefine la URL o archivo al que se enviarán los datos una vez procesado el formulario (en este caso bancodentro.html).-->
+
+<label for="nombre">NOMBRE:</label>
+<!--Muestran el nombre del campo en la pantalla. El atributo forse enlaza con el idcorrespondiente <input>para mejorar la accesibilidad (al hacer clic en el texto, se enfoca la caja de entrada).-->
+<input type="text" 
+       id="nombre" 
+       name="NOMBRE">
+       <!--Capturan la información ingresada por el usuario.-->
+
+<br>
+<br>
+<br>
+<!--Le indica al navegador que el documento utiliza el estándar HTML5.-->
+
+<label for="apellido"> APELLIDO:</label>
+<input type="text" 
+       id="apellido" 
+       name="APELLIDO">
+<!--Le indica al navegador que el documento utiliza el estándar HTML5.-->
+
+<br>
+<br>
+<br>
+
+<!--Le indica al navegador que el documento utiliza el estándar HTML5.-->
+
+<label for="correo"> CORREO:</label>
+<input type="email" 
+       id="correo" 
+       name="CORREO">
+<!--Le indica al navegador que el documento utiliza el estándar HTML5.-->
+
+<select name="Sexo"> 
+    <option required="femenino o maculino">elegir</option>
+    <option required="masculino">Masculino</option>
+    <option required="femenino">Femenino</option>
+
+</select>
+<!--Le indica al navegador que el documento utiliza el estándar HTML5.-->
+
+<br>
+<br>
+<br>
+
+<label for="telefono">TELEFONO</label>
+<input type="tel" 
+       id="telefono" 
+       name="TELEFONO">
+
+<br>
+<br>
+<br>
+
+
+
+<label for="direccion">DIRECCION:</label>
+<input type="ADDRESS" 
+       id="direccion" 
+       name="DIRECCION">
+
+<br>
+<br>
+
+
+<label for="dui">DUI:</label>
+<input type="DUI" 
+       id="dui" 
+       name="DUI">
+
+<br>
+<br>
+<br>
+
+
+<label for="contraseña">CONTRASEÑA:</label>
+<input type="Password" 
+       id="contraseña" 
+       name="CONTRASEÑA">
+
+<br>
+<br>
+<br>
+
+<button type="submit">Terminar Registro</button>
+<!--<button type="submit">Terminar Registro</button>: Botón de acción que activa el procesamiento del formulario. Al presionarlo, el navegador recopila los valores de los elementos <input>y <select>mediante sus atributos namey redirige los datos a bancodentro.html.-->
+
+</form>
+</body>
+</html>

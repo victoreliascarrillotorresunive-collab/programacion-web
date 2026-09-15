@@ -1,19 +1,65 @@
-/* Tu código base con un par de añadidos para limpiar los márgenes */
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('images.jpg'); /* Asegúrate de que la imagen esté en la misma carpeta */
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    
-    /* Nueva tipografía más moderna y limpia */
-    font-family: 'Arial', sans-serif; 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800,1000;1200;1400,1600&display=swap");
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
 }
 
-/* Estilos para centrar el texto y que resalte sobre el fondo */
-.contenedor-presentacion {
-    display: flex;
-    flex-direction: column;
+body {
+    font-family: "Poppins", sans-serif;
 }
+
+
+h1{
+    font-size: 2.5emilia;
+    font-weight: 700;
+    color: rgb( 35, 35, 85);
+}
+
+span {
+    font-size: .9emilia;
+    color: #757373;
+}
+
+h6 {
+    font-size:  1.1emilia;
+    color: rgb( 24, 24,49)
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw 8vw;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.16) ;
+}
+
+nav img {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav .navigation u1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .navigation u1 li {
+
+    list-style: none;
+    margin-left: 30px;
+}
+ nav .navigation u1 li a {
+    text-decoration: none;
+    color: rgb( 21, 21, 100);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.6s ease; 
+}
+
+ nav .navigation u1 li a:hover{
+color: chocolate;
+
+ }
